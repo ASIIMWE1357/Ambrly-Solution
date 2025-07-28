@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>
+      Ambrly solutions & Services | AmbrlySolution - Enterprise Technology
+      Partner
+    </title>
+    <meta
+      name="description"
+      content="Comprehensive Ambrly services including custom software development, cloud solutions, cybersecurity, data analytics, and digital transformation consulting."
+    />
+    <meta
+      name="keywords"
+      content="Ambrly services, software development, cloud computing, cybersecurity, data analytics, digital transformation"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      :root {
+        --primary: #2a5bd7;
+        --secondary: #1a365d;
+        --accent: #4e7bff;
+        --dark: #2f2f2f;
+        --light: #f8f9fa;
+        --text: #4a5568;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+      }
+
+      .top-bar {
+        background-color: var(--secondary);
+        color: white;
+        padding: 10px 0;
+        font-size: 14px;
+      }
+
+      .top-bar a {
+        color: rgba(255, 255, 255, 0.8);
+        margin-right: 15px;
+        transition: color 0.3s;
+      }
+
+      .top-bar a:hover {
+        color: white;
+        text-decoration: none;
+      }
+
+      .navbar {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        background: white !important;
+      }
+
+      .navbar-brand {
+        font-weight: 800;
+        font-size: 24px;
+        color: var(--dark) !important;
+      }
+
+      .navbar-brand span {
+        color: var(--primary);
+      }
+
+      .nav-item {
+        margin: 0 5px;
+      }
+
+      .nav-link {
+        font-weight: 600;
+        color: var(--dark) !important;
+        padding: 8px 15px !important;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary) !important;
+      }
+
+      .cta {
+        background: var(--primary);
+        border-radius: 4px;
+        margin-left: 10px;
+      }
+
+      .cta .nav-link {
+        color: white !important;
+      }
+
+      .hero-wrap {
+        background-position: center center;
+        background-size: cover;
+        min-height: 400px;
+        position: relative;
+      }
+
+      .hero-wrap:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .hero-wrap .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .breadcrumbs {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .breadcrumbs a {
+        color: white;
+      }
+
+      .services-section {
+        padding: 100px 0;
+        background: var(--light);
+      }
+
+      .heading-section {
+        margin-bottom: 50px;
+      }
+
+      .heading-section h2 {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .heading-section h2:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--accent);
+      }
+
+      .heading-section h2 span {
+        color: var(--primary);
+      }
+
+      .services {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .services:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .services .icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(78, 123, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        transition: all 0.3s ease;
+      }
+
+      .services:hover .icon {
+        background: var(--primary);
+      }
+
+      .services:hover .icon i {
+        color: white;
+      }
+
+      .services .icon i {
+        font-size: 36px;
+        color: var(--accent);
+        transition: all 0.3s ease;
+      }
+
+      .services h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+
+      .project {
+        margin-bottom: 30px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .project:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .project .img {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .project .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .project:hover .img img {
+        transform: scale(1.1);
+      }
+
+      .project .text {
+        padding: 20px;
+        background: white;
+      }
+
+      .project .text span {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .project .text h3 {
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+
+      .project .text h3 a {
+        color: var(--dark);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 767.98px) {
+        .hero-wrap {
+          min-height: 300px;
+        }
+
+        .services {
+          margin-bottom: 30px;
+        }
+
+        .cta {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          >Ambrly<span>solution</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link active" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cases.html">Case Studies</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item cta ml-lg-3"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section
+      class="hero-wrap hero-wrap-2"
+      style="background-image: url('images/services.jpg')"
+    >
+      <div class="container">
+        <div
+          class="row no-gutters slider-text align-items-center justify-content-center"
+        >
+          <div class="col-md-9 text-center">
+            <h1 class="mb-4 text-white">Our Ambrly Services & Solutions</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"
+                ><a href="index.html"
+                  >Home <i class="fas fa-chevron-right"></i></a
+              ></span>
+              <span>Services</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-lg-8 text-center heading-section">
+            <h2 class="mb-4">Our Expert <span>Ambrly solutions</span></h2>
+            <p class="lead">
+              Comprehensive technology services designed to drive your digital
+              transformation and business growth.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="services text-center">
+              <div class="icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Custom Software Development</h3>
+              <p>
+                Tailored applications built with modern frameworks to solve your
+                unique business challenges and drive efficiency.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="services text-center">
+              <div class="icon">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <h3>Cloud Solutions</h3>
+              <p>
+                Secure, scalable cloud infrastructure and migration services to
+                optimize costs and enhance business agility.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="services text-center">
+              <div class="icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Cybersecurity</h3>
+              <p>
+                End-to-end protection for your digital assets with 24/7
+                monitoring, threat detection, and compliance solutions.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="services text-center">
+              <div class="icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Data Analytics & BI</h3>
+              <p>
+                Transform raw data into actionable insights with advanced
+                analytics, AI, and business intelligence tools.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="services text-center">
+              <div class="icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>UX/UI Design</h3>
+              <p>
+                Intuitive, engaging digital experiences crafted to boost user
+                satisfaction and conversion rates.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="services text-center">
+              <div class="icon">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <h3>Ambrly Infrastructure</h3>
+              <p>
+                Reliable, high-performance network and infrastructure solutions
+                to support your business operations.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="services text-center">
+              <div class="icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>AI & Automation</h3>
+              <p>
+                Intelligent automation solutions to streamline processes and
+                enhance decision-making capabilities.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="services text-center">
+              <div class="icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3>Ambrly Consulting</h3>
+              <p>
+                Strategic technology guidance to align your Ambrly investments
+                with business objectives and growth plans.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work/Projects Section -->
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-lg-8 text-center heading-section">
+            <h2 class="mb-4">Success <span>Stories</span></h2>
+            <p class="lead">
+              Real-world solutions we've delivered for clients across
+              industries.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="project">
+              <div class="img">
+                <img
+                  src="images/drooop.png"
+                  class="img-fluid"
+                  alt="E-Commerce Platform"
+                />
+              </div>
+              <div class="text text-center">
+                <span>Web Development</span>
+                <h3>
+                  <a href="cases.html">E-Commerce Platform for Retail Chain</a>
+                </h3>
+                <p>
+                  Scalable platform increased online sales by 240% in first year
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="project">
+              <div class="img">
+                <img
+                  src="images/dashboard.jpg"
+                  class="img-fluid"
+                  alt="Analytics Dashboard"
+                />
+              </div>
+              <div class="text text-center">
+                <span>BI & Analytics</span>
+                <h3>
+                  <a href="cases.html">Sales Analytics Dashboard for FMCG</a>
+                </h3>
+                <p>Real-time insights reduced decision-making time by 65%</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="project">
+              <div class="img">
+                <img
+                  src="images/cyberseurity.jpg"
+                  class="img-fluid"
+                  alt="Cybersecurity"
+                />
+              </div>
+              <div class="text text-center">
+                <span>Cybersecurity</span>
+                <h3><a href="cases.html">Threat Monitoring for FinTech</a></h3>
+                <p>100% threat detection rate with zero false positives</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="project">
+              <div class="img">
+                <img
+                  src="images/mobile app.jpg"
+                  class="img-fluid"
+                  alt="Mobile App"
+                />
+              </div>
+              <div class="text text-center">
+                <span>UX/UI Design</span>
+                <h3>
+                  <a href="cases.html">Mobile App for Logistics Startup</a>
+                </h3>
+                <p>Redesigned app increased user retention by 180%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <a href="cases.html" class="btn btn-primary btn-lg"
+              >Solution Overview
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="ftco-section bg-primary text-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2 class="mb-3">
+              Ready to Transform Your Business with Technology?
+            </h2>
+            <p class="mb-0">
+              Schedule a free consultation with our experts to discuss your
+              technology needs.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-right">
+            <a href="contact.html" class="btn btn-light btn-lg"
+              >Get Started Today</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      // Smooth scroll for anchor links
+      $(document).ready(function () {
+        $('a[href*="#"]').on("click", function (e) {
+          e.preventDefault();
+
+          $("html, body").animate(
+            {
+              scrollTop: $($(this).attr("href")).offset().top,
+            },
+            500,
+            "linear"
+          );
+        });
+
+        // Add animation to services on scroll
+        $(window).scroll(function () {
+          $(".services").each(function () {
+            var position = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+
+            if (scroll > position - windowHeight + 200) {
+              $(this).addClass("animated fadeInUp");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

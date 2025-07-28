@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="AmbrlySolution - Professional IT solutions and services"
+    />
+    <meta
+      name="keywords"
+      content="AmbrlySolution , web development, case studies, technology services"
+    />
+
+    <title>AmbrlySolution - Our Case Studies</title>
+
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" />
+
+    <!-- Fonts with fallback -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome with integrity check -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS with preload -->
+    <link
+      rel="preload"
+      href="css/animate.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/animate.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="css/owl.carousel.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="css/owl.carousel.min.css"
+    /></noscript>
+
+    <link
+      rel="preload"
+      href="css/owl.theme.default.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="css/owl.theme.default.min.css"
+    /></noscript>
+
+    <link
+      rel="preload"
+      href="css/magnific-popup.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/magnific-popup.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="css/flaticon.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/flaticon.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="css/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
+
+    <!-- Inline critical CSS -->
+    <style>
+      .project {
+        position: relative;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .project:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .project .img {
+        aspect-ratio: 16/9;
+        overflow: hidden;
+      }
+
+      .project .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .project:hover .img img {
+        transform: scale(1.05);
+      }
+
+      .project .text {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .project .text span {
+        font-size: 13px;
+        font-weight: 500;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .project .text h3 {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .project .text h3 a {
+        color: #000;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .project .text h3 a:hover {
+        color: #007bff;
+      }
+
+      .project .icon {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        width: 36px;
+        height: 36px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+        color: #fff;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      .project .icon:hover {
+        background: #007bff;
+        transform: scale(1.1);
+      }
+
+      .row.g-4 > div[class*="col-"] {
+        display: flex;
+        margin-bottom: 30px;
+      }
+
+      /* Skip to content link for accessibility */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #000;
+        color: white;
+        padding: 8px;
+        z-index: 100;
+        transition: top 0.3s;
+      }
+
+      .skip-link:focus {
+        top: 0;
+      }
+
+      /* Improved focus styles */
+      a:focus,
+      button:focus {
+        outline: 2px solid #007bff;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          >Ambrly<span>solution</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item active">
+              <a href="cases.html" class="nav-link" aria-current="page"
+                >Case Study</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END nav -->
+
+    <section
+      class="hero-wrap hero-wrap-2"
+      style="background-image: url('images/modern-technologY.jpg')"
+      data-stellar-background-ratio="0.5"
+    >
+      <div class="overlay"></div>
+      <div class="container">
+        <div
+          class="row no-gutters slider-text align-items-end justify-content-center"
+        >
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Case Study</h1>
+            <p class="breadcrumbs">
+              <span class="mr-2"
+                ><a href="index.html"
+                  >Home <i class="fas fa-chevron-right"></i></a
+              ></span>
+              <span>Case Study <i class="fas fa-chevron-right"></i></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main id="main-content">
+      <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+              <h2 class="mb-4">Our Strategic <span>Work</span></h2>
+              <p class="subheading">
+                Explore our successful projects and case studies
+              </p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/gamehub.png"
+                    class="img-fluid"
+                    alt="GameHub - Video Game Discovery Platform"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>Web Development</span>
+                  <h3>
+                    <a href="https://game-hub-iota-ruby.vercel.app/"
+                      >Best Solution for Information Technology</a
+                    >
+                  </h3>
+                </div>
+                <a
+                  href="images/gamehub.png"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                  aria-label="Expand GameHub project image"
+                >
+                  <span class="fas fa-expand"></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/drooop.png"
+                    class="img-fluid"
+                    alt="Dropp-Off E-commerce Platform"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>Web Application</span>
+                  <h3>
+                    <a href="https://dropp-off-ecommerce.vercel.app/"
+                      >Creative Idea Build Up</a
+                    >
+                  </h3>
+                </div>
+                <a
+                  href="images/drooop.png"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                  aria-label="Expand Dropp-Off project image"
+                >
+                  <span class="fas fa-expand"></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/restaurant.png"
+                    class="img-fluid"
+                    alt="Restaurant Website Design"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>Web Development</span>
+                  <h3>
+                    <a href="https://restaurant-mauve-nine.vercel.app/"
+                      >Web Design Concept &amp; Web Analysis</a
+                    >
+                  </h3>
+                </div>
+                <a
+                  href="images/restaurant.png"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                  aria-label="Expand Restaurant project image"
+                >
+                  <span class="fas fa-expand"></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/saloon.png"
+                    class="img-fluid"
+                    alt="Barber Salon Booking System"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>UI/UX Strategy</span>
+                  <h3>
+                    <a href="https://barber13-sand.vercel.app/"
+                      >Strategy for Enduring Customer Relationships</a
+                    >
+                  </h3>
+                </div>
+                <a
+                  href="images/saloon.png"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                  aria-label="Expand Barber Salon project image"
+                >
+                  <span class="fas fa-expand"></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/ambry.png"
+                    class="img-fluid"
+                    alt="Ambrly Solution Website"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>Web Development</span>
+                  <h3>
+                    <a
+                      href="https://ambrly-asiimwe-ambroses-projects.vercel.app/"
+                      >Best Solution for Information Technology</a
+                    >
+                  </h3>
+                </div>
+                <a
+                  href="images/ambry.png"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                  aria-label="Expand Ambrly Solution project image"
+                >
+                  <span class="fas fa-expand"></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/work-6.jpg"
+                    class="img-fluid"
+                    alt="Web Application Project"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>Web Application</span>
+                  <h3><a href="#">Creative Idea Build Up</a></h3>
+                </div>
+                <a
+                  href="images/work-6.jpg"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                  aria-label="Expand Web Application project image"
+                >
+                  <span class="fas fa-expand"></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/work-7.jpg"
+                    class="img-fluid"
+                    alt="Web Development Project"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>Web Development</span>
+                  <h3><a href="#">Web Design Concept &amp; Web Analysis</a></h3>
+                </div>
+                <a
+                  href="images/work-7.jpg"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                  aria-label="Expand Web Development project image"
+                >
+                  <span class="fas fa-expand"></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/UIUX.jpg"
+                    class="img-fluid"
+                    alt="UI/UX Design Project"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>UI/UX Strategy</span>
+                  <h3>
+                    <a href="#">Strategy for Enduring Customer Relationships</a>
+                  </h3>
+                </div>
+                <a
+                  href="images/UIUX.jpg"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                  aria-label="Expand UI/UX project image"
+                >
+                  <span class="fas fa-expand"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          F
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px" aria-hidden="true">
+        <circle
+          class="path-bg"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke="#eeeeee"
+        />
+        <circle
+          class="path"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          stroke="#F96D00"
+        />
+      </svg>
+    </div>
+
+    <!-- Scripts with defer and async where appropriate -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+
+    <!-- Google Maps API only loaded if needed -->
+    <script>
+      function loadGoogleMaps() {
+        const script = document.createElement("script");
+        script.src =
+          "https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&callback=initMap";
+        script.async = true;
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+
+      // Load when needed (you might want to add some condition)
+      window.addEventListener("DOMContentLoaded", function () {
+        // Load Google Maps if on contact page or when needed
+        if (document.querySelector(".google-map")) {
+          loadGoogleMaps();
+        }
+      });
+    </script>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
