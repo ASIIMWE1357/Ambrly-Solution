@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
     <title>
       About Us - AmbrlySolution Inc. | Enterprise IT Services & Consulting
@@ -18,35 +18,94 @@
       content="IT services, technology consulting, enterprise solutions, digital transformation, IT consulting"
     />
 
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="preload" href="images/favicon.png" as="image" type="image/png" />
 
     <!-- Bootstrap CSS -->
     <link
+      rel="preload"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <!-- Fonts -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <!-- Icons -->
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+    </noscript>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="preload"
+      href="css/animate.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/animate.min.css" /></noscript>
 
+    <link
+      rel="preload"
+      href="css/owl.carousel.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/owl.carousel.min.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="css/magnific-popup.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/magnific-popup.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="css/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
+
+    <!-- Inline critical CSS -->
     <style>
-      /* Enhanced professional styling */
+      /* ===================================
+   1. Global Variables & Base Styles
+=================================== */
       :root {
         --primary-color: #2a5bd7;
         --secondary-color: #1a365d;
@@ -56,10 +115,17 @@
         --text-color: #4a5568;
       }
 
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
       body {
         font-family: "Open Sans", sans-serif;
         color: var(--text-color);
         line-height: 1.6;
+        overflow-x: hidden;
       }
 
       h1,
@@ -70,14 +136,47 @@
       h6 {
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
+        margin-top: 0;
       }
 
-      .hero-wrap {
-        background-position: center center;
-        background-size: cover;
-        min-height: 400px;
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
       }
 
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1140px;
+        }
+      }
+
+      /* ===================================
+   2. Top Bar & Navbar
+=================================== */
       .top-bar {
         background-color: var(--secondary-color);
         color: white;
@@ -99,10 +198,24 @@
       .navbar {
         box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         padding: 15px 0;
+        transition: all 0.5s ease;
+        position: relative;
+        background: white;
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark-color);
+      }
+
+      .navbar-brand span {
+        color: var(--primary-color);
       }
 
       .navbar-brand img {
         height: 40px;
+        width: auto;
       }
 
       .nav-item {
@@ -112,6 +225,7 @@
       .nav-link {
         font-weight: 500;
         color: var(--dark-color);
+        padding: 0.5rem 1rem;
       }
 
       .nav-link:hover,
@@ -119,18 +233,114 @@
         color: var(--primary-color);
       }
 
+      /* Navbar Toggler */
+      .navbar-toggler {
+        border: none;
+        padding: 0.5rem 1rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+      }
+
+      .navbar-toggler-text {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+  
+      /* Sticky Navbar */
+      .navbar.scrolled {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.9) !important;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0 !important;
+      }
+
+      .navbar.scrolled .nav-link {
+        color: white !important;
+      }
+
+      .navbar.scrolled .navbar-brand {
+        color: white;
+      }
+
+      .navbar.scrolled.awake {
+        margin-top: 0;
+        transition: all 0.3s ease-out;
+      }
+      .navbar.scrolled.sleep {
+        margin-top: -100px;
+        transition: all 0.4s ease-out;
+      }
+
+      body.ftco-navbar-show {
+        padding-top: 60px;
+      }
+
+      /* ===================================
+   3. Hero Section
+=================================== */
+      .hero-wrap {
+        background-position: center center;
+        background-size: cover;
+        min-height: 400px;
+        position: relative;
+      }
+
+      .hero-wrap .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .breadcrumbs {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+      }
+
+      .breadcrumbs a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .breadcrumbs i {
+        margin: 0 5px;
+        font-size: 0.8rem;
+      }
+
+      /* ===================================
+   4. Buttons
+=================================== */
       .btn-primary {
         background-color: var(--primary-color);
         border-color: var(--primary-color);
         padding: 8px 20px;
         font-weight: 500;
+        transition: all 0.3s ease;
       }
 
       .btn-primary:hover {
         background-color: var(--secondary-color);
         border-color: var(--secondary-color);
+        transform: translateY(-2px);
       }
 
+      .btn-lg {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+      }
+
+      /* ===================================
+   5. Team Section
+=================================== */
       .team-card {
         border-radius: 8px;
         overflow: hidden;
@@ -169,6 +379,27 @@
         font-size: 14px;
       }
 
+      .team-social a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: var(--light-color);
+        color: var(--dark-color);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 32px;
+        margin-right: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .team-social a:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      /* ===================================
+   6. Counters / Stats
+=================================== */
       .counter-box {
         text-align: center;
         padding: 40px 20px;
@@ -197,10 +428,18 @@
         letter-spacing: 0.5px;
       }
 
+      .animate-stats {
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      /* ===================================
+   7. Features Section
+=================================== */
       .section-title {
         position: relative;
         margin-bottom: 50px;
         color: var(--dark-color);
+        text-align: center;
       }
 
       .section-title:after {
@@ -212,6 +451,10 @@
         width: 80px;
         height: 3px;
         background: var(--accent-color);
+      }
+
+      .section-title span {
+        color: var(--primary-color);
       }
 
       .feature-icon {
@@ -229,10 +472,6 @@
       .feature-icon:hover {
         transform: scale(1.1);
       }
-      .ftco-footer-social a:hover {
-        background-color: #af671e; /* or your brand color */
-        color: #343a40;
-      }
 
       .feature-icon i {
         font-size: 36px;
@@ -244,6 +483,8 @@
         border-radius: 8px;
         transition: all 0.3s ease;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+        padding: 30px;
       }
 
       .feature-box:hover {
@@ -251,19 +492,9 @@
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
       }
 
-      .breadcrumbs {
-        color: rgba(255, 255, 255, 0.8);
-      }
-
-      .breadcrumbs a {
-        color: white;
-      }
-
-      .breadcrumbs i {
-        font-size: 12px;
-      }
-
-      /* Professional animation for stats */
+      /* ===================================
+   8. Animations
+=================================== */
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -275,14 +506,21 @@
         }
       }
 
-      .animate-stats {
-        animation: fadeInUp 1s ease forwards;
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 767.98px) {
+      /* ===================================
+   9. Responsive Adjustments
+=================================== */
+      @media (max-width: 575.98px) {
+        /* Extra small devices */
         .hero-wrap {
           min-height: 300px;
+        }
+
+        .navbar-brand {
+          font-size: 1.2rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
         }
 
         .team-img {
@@ -296,54 +534,122 @@
         .counter-box .number {
           font-size: 36px;
         }
+
+        .feature-box {
+          padding: 20px;
+          margin-bottom: 20px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        /* Small devices */
+        .hero-wrap {
+          min-height: 350px;
+        }
+
+        .navbar-collapse {
+          padding: 15px 0;
+        }
+
+        .team-card {
+          max-width: 350px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .feature-icon {
+          width: 60px;
+          height: 60px;
+        }
+
+        .feature-icon i {
+          font-size: 28px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        /* Medium devices */
+        .team-img {
+          height: 220px;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        .navbar,
+        .hero-wrap:before,
+        .team-social,
+        .btn,
+        .footer {
+          display: none !important;
+        }
+
+        body {
+          padding: 0;
+          background: white;
+          color: black;
+          font-size: 12pt;
+        }
+
+        .container {
+          width: 100%;
+          max-width: 100%;
+          padding: 0;
+        }
+
+        .team-card,
+        .feature-box {
+          page-break-inside: avoid;
+          margin-bottom: 20pt;
+        }
       }
     </style>
   </head>
 
   <body>
+ 
+ 
     <!-- Navigation -->
-   
     <nav
-    class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
-    id="ftco-navbar"
-  >
-    <div class="container">
-      <a class="navbar-brand" href="index.html"
-        >Ambrly<span>solution</span></a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#ftco-nav"
-        aria-controls="ftco-nav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="oi oi-menu"></span> Menu
-      </button>
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Ambrly<span>solution</span></a>
+        <button
+          class="navbar-toggler p-0 border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-text">Menu</span>
+     
+        </button>
 
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a href="index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="services.html" class="nav-link">Services</a>
-          </li>
-          <li class="nav-item">
-            <a href="cases.html" class="nav-link">Case Study</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact us</a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="cases.html" class="nav-link">Case Study</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact us</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
     <!-- Hero Section -->
     <section
@@ -374,381 +680,379 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-lg-8 text-center">
-            <h2 class="section-title">
-              Trusted IT Partner for <span>35+ Years</span>
-            </h2>
-            <p class="lead">
-              Since 1987, AmbrlySolution Inc. has been helping global
-              enterprises leverage technology to drive innovation, operational
-              efficiency, and sustainable competitive advantage. Our team of
-              certified experts delivers enterprise-grade solutions tailored to
-              your unique business requirements.
-            </p>
+    <main id="main-content">
+      <!-- About Section -->
+      <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+              <h2 class="section-title">
+                Trusted IT Partner for <span>35+ Years</span>
+              </h2>
+              <p class="lead">
+                Since 1987, AmbrlySolution Inc. has been helping global
+                enterprises leverage technology to drive innovation, operational
+                efficiency, and sustainable competitive advantage. Our team of
+                certified experts delivers enterprise-grade solutions tailored to
+                your unique business requirements.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <img
-              src="images/CAMERA.jpg"
-              alt="AmbrlySolution Team"
-              class="img-fluid rounded shadow"
-            />
-          </div>
-          <div class="col-lg-6 pl-lg-5">
-            <h3 class="mb-4">Our Mission</h3>
-            <p>
-              To empower organizations through strategic technology solutions
-              that solve complex business challenges, drive digital
-              transformation, and create measurable value for all stakeholders.
-            </p>
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <img
+                src="images/CAMERA.jpg"
+                alt="AmbrlySolution Team"
+                class="img-fluid rounded shadow"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="col-lg-6 pl-lg-5">
+              <h3 class="mb-4">Our Mission</h3>
+              <p>
+                To empower organizations through strategic technology solutions
+                that solve complex business challenges, drive digital
+                transformation, and create measurable value for all stakeholders.
+              </p>
 
-            <h3 class="mt-5 mb-4">Our Core Values</h3>
-            <div class="d-flex mb-4">
-              <div class="mr-4">
-                <i class="fas fa-check-circle text-primary fa-2x"></i>
-              </div>
-              <div>
-                <h5 class="mb-2">Client-Centric Approach</h5>
-                <p>
-                  We begin by thoroughly understanding your business objectives
-                  before developing tailored technology solutions.
-                </p>
-              </div>
-            </div>
-            <div class="d-flex mb-4">
-              <div class="mr-4">
-                <i class="fas fa-check-circle text-primary fa-2x"></i>
-              </div>
-              <div>
-                <h5 class="mb-2">Results-Driven Methodology</h5>
-                <p>
-                  We measure success by the tangible business impact and ROI our
-                  solutions deliver.
-                </p>
-              </div>
-            </div>
-            <div class="d-flex">
-              <div class="mr-4">
-                <i class="fas fa-check-circle text-primary fa-2x"></i>
-              </div>
-              <div>
-                <h5 class="mb-2">Future-Ready Solutions</h5>
-                <p>
-                  We architect scalable, adaptable technology platforms that
-                  evolve with your business needs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section
-      class="ftco-counter img bg-dark"
-      id="section-counter"
-      style="
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)
-          ),
-          url('images/modern-technologY.jpg');
-        background-size: cover;
-        background-position: center;
-      "
-    >
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="counter-box animate-stats">
-              <span class="number" data-number="850">0</span>
-              <span>Successful Projects</span>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="counter-box animate-stats">
-              <span class="number" data-number="650">0</span>
-              <span>Satisfied Clients</span>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="counter-box animate-stats">
-              <span class="number" data-number="150">0</span>
-              <span>Certified Experts</span>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="counter-box animate-stats">
-              <span class="number" data-number="35">0</span>
-              <span>Years Experience</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="ftco-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-lg-8 text-center">
-            <h2 class="section-title">Our Core <span>Capabilities</span></h2>
-            <p>
-              Comprehensive IT solutions designed to address your most pressing
-              business challenges and opportunities.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="feature-box text-center p-5 h-100">
-              <div class="feature-icon">
-                <i class="fas fa-code"></i>
-              </div>
-              <h3>Enterprise Software</h3>
-              <p>
-                Custom applications built to your exact specifications using
-                modern development frameworks and agile methodologies.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="feature-box text-center p-5 h-100">
-              <div class="feature-icon">
-                <i class="fas fa-cloud"></i>
-              </div>
-              <h3>Cloud Transformation</h3>
-              <p>
-                Secure, scalable cloud infrastructure and migration services for
-                business agility and cost optimization.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="feature-box text-center p-5 h-100">
-              <div class="feature-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <h3>Cybersecurity</h3>
-              <p>
-                End-to-end protection for your data, systems, and digital assets
-                with 24/7 monitoring and threat intelligence.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="feature-box text-center p-5 h-100">
-              <div class="feature-icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h3>Advanced Analytics</h3>
-              <p>
-                Transform raw data into actionable business intelligence with
-                predictive modeling and AI-driven insights.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="feature-box text-center p-5 h-100">
-              <div class="feature-icon">
-                <i class="fas fa-mobile-alt"></i>
-              </div>
-              <h3>Digital Experience</h3>
-              <p>
-                Intuitive interfaces and seamless omnichannel experiences that
-                enhance user engagement.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="feature-box text-center p-5 h-100">
-              <div class="feature-icon">
-                <i class="fas fa-headset"></i>
-              </div>
-              <h3>Strategic Consulting</h3>
-              <p>
-                Technology roadmap development and digital transformation
-                strategy aligned with business goals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-lg-8 text-center">
-            <h2 class="section-title">Executive <span>Leadership</span></h2>
-            <p>
-              The visionary professionals guiding our company's strategic
-              direction and your success.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="team-card">
-              <div
-                class="team-img"
-                style="background-image: url('images/CEO.jpg')"
-              ></div>
-              <div class="team-info">
-                <h3>ASIIMWE AMBROSE</h3>
-                <span class="team-position">CEO & Founder</span>
-                <p>
-                  With 30+ years in technology leadership, Sarah drives our
-                  strategic vision and cultivates lasting client partnerships.
-                </p>
-                <div class="team-social mt-3">
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
+              <h3 class="mt-5 mb-4">Our Core Values</h3>
+              <div class="d-flex mb-4">
+                <div class="mr-4">
+                  <i class="fas fa-check-circle text-primary fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="mb-2">Client-Centric Approach</h5>
+                  <p>
+                    We begin by thoroughly understanding your business objectives
+                    before developing tailored technology solutions.
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="team-card">
-              <div
-                class="team-img"
-                style="background-image: url('images/CEO.jpg')"
-              ></div>
-              <div class="team-info">
-                <h3>ASIIMWE AMBROSE</h3>
-                <span class="team-position">Chief Technology Officer</span>
-                <p>
-                  Michael leads our technology innovation strategy and ensures
-                  delivery of cutting-edge, future-ready solutions.
-                </p>
-                <div class="team-social mt-3">
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                  <a href="#"><i class="fab fa-github"></i></a>
+              <div class="d-flex mb-4">
+                <div class="mr-4">
+                  <i class="fas fa-check-circle text-primary fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="mb-2">Results-Driven Methodology</h5>
+                  <p>
+                    We measure success by the tangible business impact and ROI our
+                    solutions deliver.
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="team-card">
-              <div
-                class="team-img"
-                style="background-image: url('imageS/CEO.jpg')"
-              ></div>
-              <div class="team-info">
-                <h3>ASIIMWE AMBROSE</h3>
-                <span class="team-position">SVP Client Services</span>
-                <p>
-                  Priya ensures exceptional service delivery and client success
-                  across our global engagements.
-                </p>
-                <div class="team-social mt-3">
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
+              <div class="d-flex">
+                <div class="mr-4">
+                  <i class="fas fa-check-circle text-primary fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="mb-2">Future-Ready Solutions</h5>
+                  <p>
+                    We architect scalable, adaptable technology platforms that
+                    evolve with your business needs.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CTA Section -->
-    <section class="ftco-section bg-primary text-white">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <h2 class="mb-3">
-              Ready to Transform Your Business with Technology?
-            </h2>
-            <p class="mb-0">
-              Schedule a complimentary consultation with our experts to discuss
-              your strategic technology needs.
-            </p>
-          </div>
-          <div class="col-lg-4 text-lg-end">
-            <a href="contact.html" class="btn btn-light btn-lg"
-              >Get Started Today</a
-            >
+      <!-- Stats Section -->
+      <section
+        class="ftco-counter img bg-dark"
+        id="section-counter"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.6)
+            ),
+            url('images/modern-technologY.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <div class="counter-box animate-stats">
+                <span class="number" data-number="850">0</span>
+                <span>Successful Projects</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <div class="counter-box animate-stats">
+                <span class="number" data-number="650">0</span>
+                <span>Satisfied Clients</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+              <div class="counter-box animate-stats">
+                <span class="number" data-number="150">0</span>
+                <span>Certified Experts</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="counter-box animate-stats">
+                <span class="number" data-number="35">0</span>
+                <span>Years Experience</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Services Section -->
+      <section class="ftco-section bg-light">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+              <h2 class="section-title">Our Core <span>Capabilities</span></h2>
+              <p>
+                Comprehensive IT solutions designed to address your most pressing
+                business challenges and opportunities.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="feature-box text-center p-4 h-100">
+                <div class="feature-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h3>Enterprise Software</h3>
+                <p>
+                  Custom applications built to your exact specifications using
+                  modern development frameworks and agile methodologies.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="feature-box text-center p-4 h-100">
+                <div class="feature-icon">
+                  <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Cloud Transformation</h3>
+                <p>
+                  Secure, scalable cloud infrastructure and migration services for
+                  business agility and cost optimization.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="feature-box text-center p-4 h-100">
+                <div class="feature-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Cybersecurity</h3>
+                <p>
+                  End-to-end protection for your data, systems, and digital assets
+                  with 24/7 monitoring and threat intelligence.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="feature-box text-center p-4 h-100">
+                <div class="feature-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Advanced Analytics</h3>
+                <p>
+                  Transform raw data into actionable business intelligence with
+                  predictive modeling and AI-driven insights.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="feature-box text-center p-4 h-100">
+                <div class="feature-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Digital Experience</h3>
+                <p>
+                  Intuitive interfaces and seamless omnichannel experiences that
+                  enhance user engagement.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="feature-box text-center p-4 h-100">
+                <div class="feature-icon">
+                  <i class="fas fa-headset"></i>
+                </div>
+                <h3>Strategic Consulting</h3>
+                <p>
+                  Technology roadmap development and digital transformation
+                  strategy aligned with business goals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+              <h2 class="section-title">Executive <span>Leadership</span></h2>
+              <p>
+                The visionary professionals guiding our company's strategic
+                direction and your success.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="team-card">
+                <div
+                  class="team-img"
+                  style="background-image: url('images/CEO.jpg')"
+                  aria-label="CEO portrait"
+                ></div>
+                <div class="team-info">
+                  <h3>ASIIMWE AMBROSE</h3>
+                  <span class="team-position">CEO & Founder</span>
+                  <p>
+                    With 30+ years in technology leadership, Sarah drives our
+                    strategic vision and cultivates lasting client partnerships.
+                  </p>
+                  <div class="team-social mt-3">
+                    <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter profile"><i class="fab fa-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="team-card">
+                <div
+                  class="team-img"
+                  style="background-image: url('images/CEO.jpg')"
+                  aria-label="CTO portrait"
+                ></div>
+                <div class="team-info">
+                  <h3>ASIIMWE AMBROSE</h3>
+                  <span class="team-position">Chief Technology Officer</span>
+                  <p>
+                    Michael leads our technology innovation strategy and ensures
+                    delivery of cutting-edge, future-ready solutions.
+                  </p>
+                  <div class="team-social mt-3">
+                    <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="team-card">
+                <div
+                  class="team-img"
+                  style="background-image: url('images/CEO.jpg')"
+                  aria-label="SVP portrait"
+                ></div>
+                <div class="team-info">
+                  <h3>ASIIMWE AMBROSE</h3>
+                  <span class="team-position">SVP Client Services</span>
+                  <p>
+                    Priya ensures exceptional service delivery and client success
+                    across our global engagements.
+                  </p>
+                  <div class="team-social mt-3">
+                    <a href="#" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram profile"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="ftco-section bg-primary text-white">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+              <h2 class="mb-3">
+                Ready to Transform Your Business with Technology?
+              </h2>
+              <p class="mb-0">
+                Schedule a complimentary consultation with our experts to discuss
+                your strategic technology needs.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-center">
+              <a href="contact.html" class="btn btn-light btn-lg"
+                >Get Started Today</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jquery.easing.min.js" defer></script>
+    <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
+    <script src="js/jquery.animateNumber.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <!-- Footer loading script -->
     <script>
-      fetch("footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch("footer.html")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.text();
+          })
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          })
+          .catch((error) => {
+            console.error('Error loading footer:', error);
+          });
+      });
     </script>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/main.js"></script>
-
+    <!-- Sticky Navbar Logic -->
     <script>
-      // Enhanced counter animation with delays
-      $(document).ready(function () {
-        $(".number").each(function (index) {
-          $(this)
-            .prop("Counter", 0)
-            .delay(index * 300)
-            .animate(
-              {
-                Counter: $(this).data("number"),
-              },
-              {
-                duration: 2000,
-                easing: "swing",
-                step: function (now) {
-                  $(this).text(Math.ceil(now));
-                },
-              }
-            );
-        });
-
-        // Set active nav link based on current page
-        const currentPage = location.pathname.split("/").pop() || "index.html";
-        const navLinks = document.querySelectorAll(".nav-link");
-
-        navLinks.forEach((link) => {
-          const linkPage = link.getAttribute("href").split("/").pop();
-          if (currentPage === linkPage) {
-            link.classList.add("active");
-            link.parentElement.classList.add("active");
+      document.addEventListener('DOMContentLoaded', function() {
+        var navbar = document.getElementById('ftco-navbar');
+        var scrolled = false;
+        
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 100) {
+            if (!scrolled) {
+              navbar.classList.add('scrolled', 'awake');
+              document.body.classList.add('ftco-navbar-show');
+            }
+            scrolled = true;
           } else {
-            link.classList.remove("active");
-            link.parentElement.classList.remove("active");
+            if (scrolled) {
+              navbar.classList.remove('awake');
+              navbar.classList.add('sleep');
+              setTimeout(function() {
+                if (window.scrollY < 10) {
+                  navbar.classList.remove('scrolled', 'sleep');
+                  document.body.classList.remove('ftco-navbar-show');
+                }
+              }, 100);
+            }
+            scrolled = false;
           }
-        });
-
-        // Smooth scroll for anchor links
-        $('a[href*="#"]').on("click", function (e) {
-          e.preventDefault();
-
-          $("html, body").animate(
-            {
-              scrollTop: $($(this).attr("href")).offset().top,
-            },
-            500,
-            "linear"
-          );
         });
       });
     </script>

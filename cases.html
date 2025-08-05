@@ -17,25 +17,30 @@
 
     <title>AmbrlySolution - Our Case Studies</title>
 
-    <!-- Preconnect to external domains for performance -->
+    <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" />
 
-    <!-- Fonts with fallback -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Preload fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    </noscript>
 
     <!-- Font Awesome with integrity check -->
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <noscript>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </noscript>
 
     <!-- CSS with preload -->
     <link
@@ -92,6 +97,326 @@
 
     <!-- Inline critical CSS -->
     <style>
+      /* ===================================
+   1. Global Variables & Base Styles
+=================================== */
+      :root {
+        --primary: #2a5bd7;
+        --secondary: #1a365d;
+        --accent: #4e7bff;
+        --dark: #2f2f2f;
+        --light: #f8f9fa;
+        --text: #4a5568;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: var(--text);
+        line-height: 1.7;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        margin-top: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1140px;
+        }
+      }
+
+      /* ===================================
+   2. Top Bar & Navbar
+=================================== */
+      .top-bar {
+        background-color: var(--secondary);
+        color: white;
+        padding: 10px 0;
+        font-size: 14px;
+      }
+
+      .top-bar a {
+        color: rgba(255, 255, 255, 0.8);
+        margin-right: 15px;
+        transition: color 0.3s;
+      }
+
+      .top-bar a:hover {
+        color: white;
+        text-decoration: none;
+      }
+
+      /* Navbar Base */
+      .navbar {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        transition: all 0.5s ease;
+        position: relative;
+        background: white;
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark);
+      }
+
+      .navbar-brand span {
+        color: var(--primary);
+      }
+
+      .navbar-brand img {
+        height: 40px;
+        width: auto;
+      }
+
+      .nav-item {
+        margin: 0 8px;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: var(--dark);
+        transition: color 0.3s;
+        padding: 0.5rem 1rem;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary);
+      }
+
+      /* CTA Button */
+      .cta {
+        background: var(--primary);
+        border-radius: 4px;
+        margin-left: 10px;
+      }
+
+      .cta .nav-link {
+        color: white !important;
+      }
+
+      /* Navbar Toggler */
+      .navbar-toggler {
+        border: none;
+        padding: 0.5rem 1rem;
+      }
+      .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+      }
+
+      .navbar-toggler-text {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .navbar-toggler:hover .navbar-toggler-text {
+        color: rgb(156, 22, 22);
+      }
+
+      /* Sticky Navbar */
+      .navbar.scrolled {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.9) !important;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0 !important;
+      }
+
+      .navbar.scrolled .nav-link {
+        color: white !important;
+      }
+
+      .navbar.scrolled .navbar-brand {
+        color: white;
+      }
+
+      .navbar.scrolled.awake {
+        margin-top: 0;
+        transition: all 0.3s ease-out;
+      }
+      .navbar.scrolled.sleep {
+        margin-top: -100px;
+        transition: all 0.4s ease-out;
+      }
+
+      body.ftco-navbar-show {
+        padding-top: 60px;
+      }
+
+      /* ===================================
+   3. Hero Section
+=================================== */
+      .hero-wrap {
+        background-position: center center;
+        background-size: cover;
+        min-height: 400px;
+        position: relative;
+      }
+
+      .hero-wrap:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .hero-wrap .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .breadcrumbs {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+      }
+      .breadcrumbs a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .breadcrumbs i {
+        margin: 0 5px;
+        font-size: 0.8rem;
+      }
+
+      /* ===================================
+   4. Services Section
+=================================== */
+      .services-section {
+        padding: 80px 0;
+        background: var(--light);
+      }
+
+      .heading-section {
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .heading-section h2 {
+        position: relative;
+        margin-bottom: 20px;
+        font-size: 2rem;
+      }
+
+      .heading-section h2:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--accent);
+      }
+
+      .heading-section h2 span {
+        color: var(--primary);
+      }
+
+      .heading-section p.subheading {
+        color: #6c757d;
+        font-size: 1.1rem;
+      }
+
+      .services {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+
+      .services:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .services .icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(78, 123, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        transition: all 0.3s ease;
+      }
+
+      .services:hover .icon {
+        background: var(--primary);
+      }
+      .services:hover .icon i {
+        color: white;
+      }
+
+      .services .icon i {
+        font-size: 36px;
+        color: var(--accent);
+        transition: all 0.3s ease;
+      }
+
+      .services h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+
+      /* ===================================
+   5. Project / Portfolio Cards
+=================================== */
       .project {
         position: relative;
         background: #fff;
@@ -102,6 +427,7 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+        margin-bottom: 30px;
       }
 
       .project:hover {
@@ -159,7 +485,7 @@
       }
 
       .project .text h3 a:hover {
-        color: #007bff;
+        color: var(--primary);
       }
 
       .project .icon {
@@ -180,13 +506,21 @@
       }
 
       .project .icon:hover {
-        background: #007bff;
+        background: var(--primary);
         transform: scale(1.1);
       }
 
-      .row.g-4 > div[class*="col-"] {
+      /* Grid layout */
+      .row.g-4 {
         display: flex;
-        margin-bottom: 30px;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+
+      .row.g-4 > [class*="col-"] {
+        padding-right: 15px;
+        padding-left: 15px;
       }
 
       /* Skip to content link for accessibility */
@@ -208,12 +542,134 @@
       /* Improved focus styles */
       a:focus,
       button:focus {
-        outline: 2px solid #007bff;
+        outline: 2px solid var(--primary);
         outline-offset: 2px;
+      }
+
+      /* ===================================
+   6. Responsive Adjustments
+=================================== */
+      @media (max-width: 575.98px) {
+        /* Extra small devices */
+        .hero-wrap {
+          min-height: 250px;
+        }
+        
+        .navbar-brand {
+          font-size: 1.2rem;
+        }
+        
+        .nav-item {
+          margin: 5px 0;
+        }
+        
+        .cta {
+          margin-left: 0;
+          margin-top: 10px;
+          display: block;
+          width: 100%;
+        }
+        
+        .heading-section h2 {
+          font-size: 1.5rem;
+        }
+        
+        .project .text {
+          padding: 15px;
+        }
+        
+        .project .text h3 {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        /* Small devices */
+        .hero-wrap {
+          min-height: 300px;
+        }
+        
+        .navbar-collapse {
+          padding: 15px 0;
+        }
+        
+        .services {
+          margin-bottom: 30px;
+        }
+        
+        .project {
+          margin-bottom: 20px;
+        }
+        
+        .row.g-4 > [class*="col-"] {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        /* Medium devices */
+        .row.g-4 > .col-md-6 {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+        
+        .row.g-4 > .col-lg-3 {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        /* Large devices */
+        .row.g-4 > .col-lg-3 {
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        /* Extra large devices */
+        .row.g-4 > .col-lg-3 {
+          flex: 0 0 25%;
+          max-width: 25%;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        .navbar,
+        .hero-wrap:before,
+        .project .icon,
+        .footer {
+          display: none !important;
+        }
+        
+        body {
+          padding: 0;
+          background: white;
+          color: black;
+          font-size: 12pt;
+        }
+        
+        .container {
+          width: 100%;
+          max-width: 100%;
+          padding: 0;
+        }
+        
+        .project {
+          page-break-inside: avoid;
+          margin-bottom: 20pt;
+        }
       }
     </style>
   </head>
   <body>
+    <!-- Skip to content link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
     <nav
       class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
       id="ftco-navbar"
@@ -223,19 +679,21 @@
           >Ambrly<span>solution</span></a
         >
         <button
-          class="navbar-toggler"
+          class="navbar-toggler p-0 border-0"
           type="button"
-          data-toggle="collapse"
-          data-target="#ftco-nav"
+          data-bs-toggle="collapse"
+          data-bs-target="#ftco-nav"
           aria-controls="ftco-nav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-text" style="color: rgba(255, 255, 255, 0.8);">Menu</span>
+
+         
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a href="index.html" class="nav-link">Home</a>
             </li>
@@ -246,9 +704,7 @@
               <a href="services.html" class="nav-link">Services</a>
             </li>
             <li class="nav-item active">
-              <a href="cases.html" class="nav-link" aria-current="page"
-                >Case Study</a
-              >
+              <a href="cases.html" class="nav-link">Case Study</a>
             </li>
             <li class="nav-item">
               <a href="contact.html" class="nav-link">Contact us</a>
@@ -303,6 +759,8 @@
                     class="img-fluid"
                     alt="GameHub - Video Game Discovery Platform"
                     loading="lazy"
+                    width="400"
+                    height="225"
                   />
                 </div>
                 <div class="text text-center">
@@ -330,6 +788,8 @@
                     class="img-fluid"
                     alt="Dropp-Off E-commerce Platform"
                     loading="lazy"
+                    width="400"
+                    height="225"
                   />
                 </div>
                 <div class="text text-center">
@@ -357,6 +817,8 @@
                     class="img-fluid"
                     alt="Restaurant Website Design"
                     loading="lazy"
+                    width="400"
+                    height="225"
                   />
                 </div>
                 <div class="text text-center">
@@ -384,6 +846,8 @@
                     class="img-fluid"
                     alt="Barber Salon Booking System"
                     loading="lazy"
+                    width="400"
+                    height="225"
                   />
                 </div>
                 <div class="text text-center">
@@ -412,6 +876,8 @@
                     class="img-fluid"
                     alt="Ambrly Solution Website"
                     loading="lazy"
+                    width="400"
+                    height="225"
                   />
                 </div>
                 <div class="text text-center">
@@ -440,6 +906,8 @@
                     class="img-fluid"
                     alt="Web Application Project"
                     loading="lazy"
+                    width="400"
+                    height="225"
                   />
                 </div>
                 <div class="text text-center">
@@ -463,6 +931,8 @@
                     class="img-fluid"
                     alt="Web Development Project"
                     loading="lazy"
+                    width="400"
+                    height="225"
                   />
                 </div>
                 <div class="text text-center">
@@ -486,6 +956,8 @@
                     class="img-fluid"
                     alt="UI/UX Design Project"
                     loading="lazy"
+                    width="400"
+                    height="225"
                   />
                 </div>
                 <div class="text text-center">
@@ -504,20 +976,11 @@
               </div>
             </div>
           </div>
-          F
         </div>
       </section>
     </main>
 
     <div id="footer-placeholder"></div>
-
-    <script>
-      fetch("footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
-    </script>
 
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen">
@@ -545,38 +1008,69 @@
     </div>
 
     <!-- Scripts with defer and async where appropriate -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jquery-migrate-3.0.1.min.js" defer></script>
+    <script src="js/popper.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/jquery.easing.1.3.js" defer></script>
+    <script src="js/jquery.waypoints.min.js" defer></script>
+    <script src="js/jquery.stellar.min.js" defer></script>
+    <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
+    <script src="js/jquery.animateNumber.min.js" defer></script>
+    <script src="js/scrollax.min.js" defer></script>
 
-    <!-- Google Maps API only loaded if needed -->
+    <!-- Main script -->
+    <script src="js/main.js" defer></script>
+
+    <!-- Footer loading script -->
     <script>
-      function loadGoogleMaps() {
-        const script = document.createElement("script");
-        script.src =
-          "https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&callback=initMap";
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-      }
-
-      // Load when needed (you might want to add some condition)
-      window.addEventListener("DOMContentLoaded", function () {
-        // Load Google Maps if on contact page or when needed
-        if (document.querySelector(".google-map")) {
-          loadGoogleMaps();
-        }
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch("footer.html")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.text();
+          })
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          })
+          .catch((error) => {
+            console.error('Error loading footer:', error);
+          });
       });
     </script>
 
-    <script src="js/main.js" defer></script>
+    <!-- Sticky Navbar Logic -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var navbar = document.getElementById("ftco-navbar");
+        var scrolled = false;
+
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 100) {
+            if (!scrolled) {
+              navbar.classList.add("scrolled", "awake");
+              document.body.classList.add("ftco-navbar-show");
+            }
+            scrolled = true;
+          } else {
+            if (scrolled) {
+              navbar.classList.remove("awake");
+              navbar.classList.add("sleep");
+              setTimeout(function() {
+                if (window.scrollY < 10) {
+                  navbar.classList.remove("scrolled", "sleep");
+                  document.body.classList.remove("ftco-navbar-show");
+                }
+              }, 100);
+            }
+            scrolled = false;
+          }
+        });
+      });
+    </script>
   </body>
 </html>

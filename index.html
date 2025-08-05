@@ -1,33 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ambrly</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
+    <title>AmbrlySolution | Creative Digital Agency in Kampala</title>
+    <meta
+      name="description"
+      content="AmbrlySolution delivers innovative digital design and development services including web design, branding, and UX/UI solutions in Kampala, Uganda."
+    />
+    <meta
+      name="keywords"
+      content="web design, branding, UX design, digital agency, Kampala, Uganda"
+    />
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" />
+
+    <!-- Fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200,300,400,500,600,700,800&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200,300,400,500,600,700,800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Font Awesome -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      />
+    </noscript>
+
+    <!-- CSS -->
+    <link
+      rel="preload"
+      href="css/animate.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/animate.css" /></noscript>
 
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="css/owl.carousel.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link rel="stylesheet" href="css/owl.carousel.min.css"
+    /></noscript>
 
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="preload"
+      href="css/magnific-popup.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript><link rel="stylesheet" href="css/magnific-popup.css" /></noscript>
 
-    <link rel="stylesheet" href="css/animate.css" />
+    <link
+      rel="preload"
+      href="css/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <!-- Inline critical CSS -->
+    <style>
+      :root {
+        --primary: #2a5bd7;
+        --secondary: #1a365d;
+        --accent: #4e7bff;
+        --dark: #2f2f2f;
+        --light: #f8f9fa;
+        --text: #4a5568;
+      }
 
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/style.css" />
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: 700;
+        margin-top: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1140px;
+        }
+      }
+
+      /* Navigation */
+      .navbar {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        transition: all 0.5s ease;
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .navbar-brand span {
+        color: var(--primary);
+      }
+
+      .nav-link {
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+      }
+
+      .navbar-toggler {
+        border: none;
+        padding: 0.5rem 1rem;
+      }
+
+      /* Hero Section */
+      .hero-wrap {
+        background-position: center center;
+        background-size: cover;
+        min-height: 100vh;
+        position: relative;
+      }
+
+   
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        padding-top: 120px;
+        padding-bottom: 80px;
+      }
+
+      /* Services */
+      .services-1 {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+
+      .services-1:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Projects */
+      .project {
+        position: relative;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .project:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .project .img {
+        aspect-ratio: 16/9;
+        overflow: hidden;
+      }
+
+      .project .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .project:hover .img img {
+        transform: scale(1.05);
+      }
+
+      /* Testimonials */
+      .testimonial-card {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 767.98px) {
+        .hero-wrap {
+          min-height: 80vh;
+        }
+
+        .hero-content {
+          padding-top: 80px;
+          padding-bottom: 60px;
+        }
+
+        .services-1 {
+          margin-bottom: 30px;
+        }
+
+        .row > [class*="col-"] {
+          margin-bottom: 30px;
+        }
+      }
+
+      @media (max-width: 575.98px) {
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .navbar-brand {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
   </head>
   <body>
+    <!-- Navigation -->
     <nav
       class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
       id="ftco-navbar"
@@ -45,7 +301,8 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="oi oi-menu"></span> Menu
+         <span class="navbar-toggler-text" style="color: rgba(255, 255, 255, 0.8);">Menu</span>
+
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
@@ -69,727 +326,725 @@
         </div>
       </div>
     </nav>
-    <!-- END nav -->
 
+    <!-- Hero Section -->
     <div
       class="hero-wrap js-fullheight"
       style="background-image: url('images/sofware-developer-thinking.jpg')"
-      data-stellar-background-ratio="0.5"
     >
       <div class="overlay"></div>
       <div class="container">
-        <div
-          class="row no-gutters slider-text js-fullheight align-items-center"
-          data-scrollax-parent="true"
-        >
-          <div
-            class="col-md-8 ftco-animate mt-5 pt-md-5"
-            data-scrollax=" properties: { translateY: '70%' }"
-          >
-            <div class="row">
-              <div class="col-md-7">
-                <p
-                  class="mb-4 pl-md-5 line"
-                  data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
+        <div class="hero-content">
+          <div class="row">
+            <div class="col-md-8 ftco-animate">
+              <p class="mb-4">
+                Creating stunning digital experiences that drive results
+              </p>
+              <h1 class="mb-4" style="color: #dadada">
+                Creative Solutions for <br />Your Digital Presence
+              </h1>
+              <p>
+                <a href="cases.html" class="btn btn-primary px-4 py-3"
+                  >View Portfolio</a
                 >
-                  Creating stunning digital experiences that drive results
-                </p>
-              </div>
+              </p>
             </div>
-            <h1
-              class="mb-4"
-              data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
-            >
-              Creative Solutions for <br />Your Digital Presence
-            </h1>
-            <p>
-              <a href="#" class="btn btn-primary px-4 py-3">View Portfolio</a>
-            </p>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="ftco-intro">
-      <div class="container">
-        <div class="row justify-content-end">
-          <div class="col-md-7">
-            <div class="row no-gutters d-flex align-items-stretch">
-              <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                <div class="services-1">
-                  <div class="line"></div>
-                  <div class="icon"><span class="flaticon-bolt"></span></div>
-                  <div class="media-body">
-                    <h3 class="heading mb-3">Graphics & Brand Design</h3>
+    <main id="main-content">
+      <!-- Services Intro -->
+      <section class="ftco-intro">
+        <div class="container">
+          <div class="row justify-content-end">
+            <div class="col-md-12">
+              <div class="row no-gutters">
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                  <div class="services-1">
+                    <div class="icon"><i class="fas fa-paint-brush"></i></div>
+                    <div class="media-body">
+                      <h3 class="heading mb-3">Graphics & Brand Design</h3>
+                      <p>Visual identities that make your brand stand out</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                <div class="services-1 color-1">
-                  <div class="line"></div>
-                  <div class="icon">
-                    <span class="flaticon-light-bulb"></span>
-                  </div>
-                  <div class="media-body">
-                    <h3 class="heading mb-3">UX/UI Design Strategy</h3>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                  <div class="services-1 color-1">
+                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="media-body">
+                      <h3 class="heading mb-3">UX/UI Design Strategy</h3>
+                      <p>User-centered designs that drive engagement</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                <div class="services-1 color-2">
-                  <div class="line"></div>
-                  <div class="icon"><span class="flaticon-cyber"></span></div>
-                  <div class="media-body">
-                    <h3 class="heading mb-3">Web & App Development</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Include Font Awesome in your <head> if not already present -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-
-    <section class="ftco-section">
-      <div class="container">
-        <!-- Section Heading -->
-        <div class="row justify-content-center pb-5">
-          <div class="col-lg-6 heading-section text-center ftco-animate">
-            <h2 class="mb-4">
-              Creative <span>Digital Solutions</span> for Your Business
-            </h2>
-            <p>
-              We combine design thinking with technical expertise to deliver
-              exceptional digital experiences that engage your audience and grow
-              your business.
-            </p>
-          </div>
-        </div>
-
-        <!-- Services Row -->
-        <div class="row align-items-center">
-          <!-- UI/UX Design -->
-          <div class="col-md-4">
-            <div class="services-2 text-center">
-              <div class="icon mb-3">
-                <i class="fas fa-pencil-ruler fa-3x text-primary"></i>
-              </div>
-              <div class="text">
-                <h3>UI/UX Design</h3>
-                <p>
-                  Creating intuitive and beautiful interfaces that enhance user
-                  experience and drive engagement.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Center Illustration -->
-          <div class="col-md-4 text-center">
-            <img
-              src="images/services.svg"
-              class="img-fluid"
-              alt="Digital Services Illustration"
-            />
-          </div>
-
-          <!-- Brand Identity -->
-          <div class="col-md-4">
-            <div class="services-2 text-center">
-              <div class="icon mb-3">
-                <i class="fas fa-fingerprint fa-3x text-primary"></i>
-              </div>
-              <div class="text">
-                <h3>Brand Identity</h3>
-                <p>
-                  Developing cohesive brand identities that communicate your
-                  values and resonate with your audience.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-counter img" id="section-counter">
-      <div class="container">
-        <div class="row no-gutters d-flex">
-          <div class="col-md-6 d-flex">
-            <div
-              class="img d-flex align-self-stretch"
-              style="background-image: url(images/web\ dev.jpg)"
-            ></div>
-          </div>
-          <div class="col-md-6 p-3 pl-md-5 py-5 bg-primary">
-            <div class="row justify-content-start pb-3">
-              <div
-                class="col-md-12 heading-section heading-section-white ftco-animate"
-              >
-                <h2 class="mb-4">Creative Services in <span>Kampala</span></h2>
-                <p>
-                  Based in Rubaga, Kampala, we deliver high-quality digital
-                  design and development solutions to clients across Uganda and
-                  beyond.
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="col-md-6 justify-content-center counter-wrap ftco-animate"
-              >
-                <div class="block-18 mb-4">
-                  <div class="text">
-                    <strong class="number" data-number="750">0</strong>
-                    <span>Project Complete</span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col-md-6 justify-content-center counter-wrap ftco-animate"
-              >
-                <div class="block-18 mb-4">
-                  <div class="text">
-                    <strong class="number" data-number="568">0</strong>
-                    <span>Happy Clients</span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col-md-6 justify-content-center counter-wrap ftco-animate"
-              >
-                <div class="block-18 mb-4">
-                  <div class="text">
-                    <strong class="number" data-number="478">0</strong>
-                    <span>Brand Identities</span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col-md-6 justify-content-center counter-wrap ftco-animate"
-              >
-                <div class="block-18 mb-4">
-                  <div class="text">
-                    <strong class="number" data-number="780">0</strong>
-                    <span>Websites Launched</span>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                  <div class="services-1 color-2">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <div class="media-body">
+                      <h3 class="heading mb-3">Web & App Development</h3>
+                      <p>Custom digital solutions for your business</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="ftco-section services-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-6 heading-section text-center ftco-animate">
-            <h2 class="mb-4">Our <span>Creative Services</span></h2>
-          </div>
-        </div>
-        <div class="row d-flex no-gutters">
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="line"></div>
-              <div class="icon">
-                <span class="flaticon-web-programming"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Web Design</h3>
-                <p>
-                  Custom website designs that are visually stunning and
-                  optimized for performance.
-                </p>
-              </div>
+      <!-- Digital Solutions -->
+      <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center pb-5">
+            <div class="col-lg-6 heading-section text-center ftco-animate">
+              <h2 class="mb-4">
+                Creative <span>Digital Solutions</span> for Your Business
+              </h2>
+              <p>
+                We combine design thinking with technical expertise to deliver
+                exceptional digital experiences that engage your audience and
+                grow your business.
+              </p>
             </div>
           </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="line"></div>
-              <div class="icon"><span class="flaticon-stats"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">App Development</h3>
-                <p>
-                  Mobile applications that provide seamless user experiences
-                  across devices.
-                </p>
+
+          <div class="row align-items-center">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <div class="services-2 text-center">
+                <div class="icon mb-3">
+                  <i class="fas fa-pencil-ruler fa-3x text-primary"></i>
+                </div>
+                <div class="text">
+                  <h3>UI/UX Design</h3>
+                  <p>
+                    Creating intuitive and beautiful interfaces that enhance
+                    user experience and drive engagement.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="line"></div>
-              <div class="icon"><span class="flaticon-secure"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Branding</h3>
-                <p>
-                  Comprehensive branding solutions from logos to complete visual
-                  identities.
-                </p>
-              </div>
+
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+              <img
+                src="images/services.svg"
+                class="img-fluid"
+                alt="Digital Services Illustration"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
             </div>
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="line"></div>
-              <div class="icon">
-                <span class="flaticon-presentation"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading mb-3">UX/UI Design</h3>
-                <p>
-                  User-centered design approaches that improve engagement and
-                  conversion.
-                </p>
+
+            <div class="col-md-4">
+              <div class="services-2 text-center">
+                <div class="icon mb-3">
+                  <i class="fas fa-fingerprint fa-3x text-primary"></i>
+                </div>
+                <div class="text">
+                  <h3>Brand Identity</h3>
+                  <p>
+                    Developing cohesive brand identities that communicate your
+                    values and resonate with your audience.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="ftco-section ftco-no-pt">
-      <style>
-        .project .img {
-          height: 250px;
-          overflow: hidden;
-          border-radius: 5px;
-        }
-        .project .img img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          display: block;
-        }
-      </style>
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-            <h2 class="mb-4">Our Recent <span>Work</span></h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="project">
-              <div class="img">
-                <img src="images/image_5.jpg" class="img-fluid" />
-              </div>
-              <div class="text text-center">
-                <span>Brand Identity</span>
-                <h3><a href="#">Modern Logo & Visual Identity System</a></h3>
-              </div>
-              <a
-                href="images/image_5.jpg"
-                class="icon image-popup d-flex justify-content-center align-items-center"
-              >
-                <span class="fa fa-expand"></span>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="project">
-              <div class="img">
-                <img src="images/gamehub.png" class="img-fluid" />
-              </div>
-              <div class="text text-center">
-                <span>Web Application</span>
-                <h3>
-                  <a href="https://game-hub-iota-ruby.vercel.app/">Game Hub</a>
-                </h3>
-              </div>
-              <a
-                href="images/gamehub.png"
-                class="icon image-popup d-flex justify-content-center align-items-center"
-              >
-                <span class="fa fa-expand"></span>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="project">
-              <div class="img">
-                <img src="images/drooop.png" class="img-fluid" />
-              </div>
-              <div class="text text-center">
-                <span>Web Design</span>
-                <h3>
-                  <a href="https://dropp-off-ecommerce.vercel.app/shop.html"
-                    >E-commerce Website Redesign</a
-                  >
-                </h3>
-              </div>
-              <a
-                href="images/drooop.png"
-                class="icon image-popup d-flex justify-content-center align-items-center"
-              >
-                <span class="fa fa-expand"></span>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="project">
-              <div class="img">
-                <img src="images/UIUX.jpg" class="img-fluid" />
-              </div>
-              <div class="text text-center">
-                <span>UI/UX Strategy</span>
-                <h3>
-                  <a href="#">Strategy for Enduring Customer Relationships</a>
-                </h3>
-              </div>
-              <a
-                href="images/UIUX.jpg"
-                class="icon image-popup d-flex justify-content-center align-items-center"
-              >
-                <span class="fa fa-expand"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section bg-light ftco-faqs">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 order-md-last">
-            <div
-              class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0"
-              style="background-image: url(images/MALE.jpg)"
-            ></div>
-            <div class="d-flex mt-3">
+      <!-- Stats Section -->
+      <section class="ftco-counter img bg-dark" id="section-counter">
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-md-6 d-flex order-md-last">
               <div
-                class="img img-2 mr-md-2 w-100"
-                style="background-image: url(images/about-1.jpg)"
-              ></div>
-              <div
-                class="img img-2 ml-md-2 w-100"
-                style="background-image: url(images/TABLET.jpg)"
+                class="img d-flex align-self-stretch"
+                style="background-image: url(images/web\ dev.jpg)"
               ></div>
             </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="heading-section mb-5 mt-5 mt-lg-0">
-              <h2 class="mb-3">Frequently Asks Questions</h2>
+            <div class="col-md-6 p-3 pl-md-5 py-5 bg-primary">
+              <div class="row justify-content-start pb-3">
+                <div
+                  class="col-md-12 heading-section heading-section-white ftco-animate"
+                >
+                  <h2 class="mb-4">
+                    Creative Services in <span>Kampala</span>
+                  </h2>
+                  <p>
+                    Based in Rubaga, Kampala, we deliver high-quality digital
+                    design and development solutions to clients across Uganda
+                    and beyond.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-md-6 justify-content-center counter-wrap ftco-animate"
+                >
+                  <div class="block-18 mb-4">
+                    <div class="text">
+                      <strong class="number" data-number="750">0</strong>
+                      <span>Project Complete</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-md-6 justify-content-center counter-wrap ftco-animate"
+                >
+                  <div class="block-18 mb-4">
+                    <div class="text">
+                      <strong class="number" data-number="568">0</strong>
+                      <span>Happy Clients</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-md-6 justify-content-center counter-wrap ftco-animate"
+                >
+                  <div class="block-18 mb-4">
+                    <div class="text">
+                      <strong class="number" data-number="478">0</strong>
+                      <span>Brand Identities</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-md-6 justify-content-center counter-wrap ftco-animate"
+                >
+                  <div class="block-18 mb-4">
+                    <div class="text">
+                      <strong class="number" data-number="780">0</strong>
+                      <span>Websites Launched</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Creative Services -->
+      <section class="ftco-section services-section">
+        <div class="container">
+          <div class="row justify-content-center pb-5">
+            <div class="col-md-6 heading-section text-center ftco-animate">
+              <h2 class="mb-4">Our <span>Creative Services</span></h2>
+            </div>
+          </div>
+          <div class="row">
             <div
-              id="accordion"
-              class="myaccordion w-100"
-              aria-multiselectable="true"
+              class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate"
             >
-              <div class="card">
-                <div class="card-header p-0" id="headingOne">
-                  <h2 class="mb-0">
-                    <button
-                      href="#collapseOne"
-                      class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                      data-parent="#accordion"
-                      data-toggle="collapse"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      <p class="mb-0">What design services do you offer?</p>
-                      <i class="fa" aria-hidden="true"></i>
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  class="collapse show"
-                  id="collapseOne"
-                  role="tabpanel"
-                  aria-labelledby="headingOne"
-                >
-                  <div class="card-body py-3 px-0">
-                    <ol>
-                      <li>Brand identity and logo design</li>
-                      <li>
-                        User interface (UI) and user experience (UX) design
-                      </li>
-                      <li>Website design and development</li>
-                      <li>Mobile application design</li>
-                      <li>Print and digital marketing materials</li>
-                    </ol>
-                  </div>
+              <div class="media block-6 services d-block">
+                <div class="icon"><span class="fas fa-laptop-code"></span></div>
+                <div class="media-body">
+                  <h3 class="heading mb-3">Web Design</h3>
+                  <p>
+                    Custom website designs that are visually stunning and
+                    optimized for performance.
+                  </p>
                 </div>
               </div>
-
-              <div class="card">
-                <div class="card-header p-0" id="headingTwo" role="tab">
-                  <h2 class="mb-0">
-                    <button
-                      href="#collapseTwo"
-                      class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                      data-parent="#accordion"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      <p class="mb-0">What's your design process?</p>
-                      <i class="fa" aria-hidden="true"></i>
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  class="collapse"
-                  id="collapseTwo"
-                  role="tabpanel"
-                  aria-labelledby="headingTwo"
-                >
-                  <div class="card-body py-3 px-0">
-                    <ol>
-                      <li>Discovery and research phase</li>
-                      <li>Concept development and wireframing</li>
-                      <li>Design iterations and feedback</li>
-                      <li>Finalization and delivery</li>
-                      <li>Implementation support</li>
-                    </ol>
-                  </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate"
+            >
+              <div class="media block-6 services d-block">
+                <div class="icon"><span class="fas fa-mobile-alt"></span></div>
+                <div class="media-body">
+                  <h3 class="heading mb-3">App Development</h3>
+                  <p>
+                    Mobile applications that provide seamless user experiences
+                    across devices.
+                  </p>
                 </div>
               </div>
-
-              <div class="card">
-                <div class="card-header p-0" id="headingThree" role="tab">
-                  <h2 class="mb-0">
-                    <button
-                      href="#collapseThree"
-                      class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                      data-parent="#accordion"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      <p class="mb-0">
-                        Do you work with clients outside Uganda?
-                      </p>
-                      <i class="fa" aria-hidden="true"></i>
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  class="collapse"
-                  id="collapseThree"
-                  role="tabpanel"
-                  aria-labelledby="headingTwo"
-                >
-                  <div class="card-body py-3 px-0">
-                    <ol>
-                      <li>Yes, we work with clients worldwide</li>
-                      <li>All communication can be done remotely</li>
-                      <li>We accommodate different time zones</li>
-                      <li>International payment options available</li>
-                      <li>Same quality standards for all projects</li>
-                    </ol>
-                  </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate"
+            >
+              <div class="media block-6 services d-block">
+                <div class="icon"><span class="fas fa-palette"></span></div>
+                <div class="media-body">
+                  <h3 class="heading mb-3">Branding</h3>
+                  <p>
+                    Comprehensive branding solutions from logos to complete
+                    visual identities.
+                  </p>
                 </div>
               </div>
-
-              <div class="card">
-                <div class="card-header p-0" id="headingFour" role="tab">
-                  <h2 class="mb-0">
-                    <button
-                      href="#collapseFour"
-                      class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                      data-parent="#accordion"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="collapseFour"
-                    >
-                      <p class="mb-0">What file formats will I receive?</p>
-                      <i class="fa" aria-hidden="true"></i>
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  class="collapse"
-                  id="collapseFour"
-                  role="tabpanel"
-                  aria-labelledby="headingTwo"
-                >
-                  <div class="card-body py-3 px-0">
-                    <p>
-                      We provide all final deliverables in industry-standard
-                      formats including PDF, JPG, PNG, SVG, and AI for print
-                      work. For digital projects, we provide source files (PSD,
-                      XD, Figma, etc.) along with style guides and
-                      documentation. Web projects include all HTML/CSS/JS files
-                      and assets.
-                    </p>
-                  </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate"
+            >
+              <div class="media block-6 services d-block">
+                <div class="icon"><span class="fas fa-user-circle"></span></div>
+                <div class="media-body">
+                  <h3 class="heading mb-3">UX/UI Design</h3>
+                  <p>
+                    User-centered design approaches that improve engagement and
+                    conversion.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Font Awesome for star ratings -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+      <!-- Portfolio -->
+      <section class="ftco-section ftco-no-pt">
+        <div class="container">
+          <div class="row justify-content-center pb-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+              <h2 class="mb-4">Our Recent <span>Work</span></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/image_5.jpg"
+                    class="img-fluid"
+                    alt="Brand Identity Project"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>Brand Identity</span>
+                  <h3><a href="#">Modern Logo & Visual Identity System</a></h3>
+                </div>
+                <a
+                  href="images/image_5.jpg"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                >
+                  <span class="fa fa-expand"></span>
+                </a>
+              </div>
+            </div>
 
-    <section class="ftco-section testimony-section bg-light py-5">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2 class="mb-4">Client Testimonials</h2>
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/gamehub.png"
+                    class="img-fluid"
+                    alt="Game Hub Project"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>Web Application</span>
+                  <h3>
+                    <a href="https://game-hub-iota-ruby.vercel.app/"
+                      >Game Hub</a
+                    >
+                  </h3>
+                </div>
+                <a
+                  href="images/gamehub.png"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                >
+                  <span class="fa fa-expand"></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/drooop.png"
+                    class="img-fluid"
+                    alt="E-commerce Project"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>Web Design</span>
+                  <h3>
+                    <a href="https://dropp-off-ecommerce.vercel.app/shop.html"
+                      >E-commerce Website Redesign</a
+                    >
+                  </h3>
+                </div>
+                <a
+                  href="images/drooop.png"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                >
+                  <span class="fa fa-expand"></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 ftco-animate">
+              <div class="project">
+                <div class="img">
+                  <img
+                    src="images/UIUX.jpg"
+                    class="img-fluid"
+                    alt="UX Design Project"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text text-center">
+                  <span>UI/UX Strategy</span>
+                  <h3><a href="#">Strategy for Customer Relationships</a></h3>
+                </div>
+                <a
+                  href="images/UIUX.jpg"
+                  class="icon image-popup d-flex justify-content-center align-items-center"
+                >
+                  <span class="fa fa-expand"></span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="row justify-content-center">
-          <div class="col-md-10">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <!-- Testimonial 1 -->
-              <div class="item text-center p-4 bg-white rounded shadow-sm">
-                <p class="mb-3">
-                  "Ambrly Designs transformed our brand identity completely.
-                  Their attention to detail and creative approach exceeded our
-                  expectations."
-                </p>
-                <p class="name font-weight-bold mb-1">Sarah K.</p>
-                <div class="rating text-warning">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star-half-alt"></i>
-                </div>
+      <section class="ftco-section bg-light ftco-faqs">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 order-md-last">
+              <div
+                class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0"
+                style="background-image: url(images/MALE.jpg)"
+              ></div>
+              <div class="d-flex mt-3">
+                <div
+                  class="img img-2 mr-md-2 w-100"
+                  style="background-image: url(images/about-1.jpg)"
+                ></div>
+                <div
+                  class="img img-2 ml-md-2 w-100"
+                  style="background-image: url(images/TABLET.jpg)"
+                ></div>
               </div>
+            </div>
 
-              <!-- Testimonial 2 -->
-              <div class="item text-center p-4 bg-white rounded shadow-sm">
-                <p class="mb-3">
-                  "The mobile app they designed for us has significantly
-                  improved user engagement. Their UX solutions were innovative
-                  yet practical."
-                </p>
-                <p class="name font-weight-bold mb-1">David M.</p>
-                <div class="rating text-warning">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="far fa-star"></i>
-                </div>
+            <div class="col-lg-6">
+              <div class="heading-section mb-5 mt-5 mt-lg-0">
+                <h2 class="mb-3">Frequently Asks Questions</h2>
               </div>
-
-              <!-- Testimonial 3 -->
-              <div class="item text-center p-4 bg-white rounded shadow-sm">
-                <p class="mb-3">
-                  "Working with Ambrly was a game-changer for our e-commerce
-                  platform. Their designs increased our conversion rate by 40%."
-                </p>
-                <p class="name font-weight-bold mb-1">Grace N.</p>
-                <div class="rating text-warning">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <!-- Testimonial 4 -->
-              <div class="item text-center p-4 bg-white rounded shadow-sm">
-                <p class="mb-3">
-                  "Their branding expertise helped us establish a strong market
-                  presence. The visual identity they created perfectly
-                  represents our values."
-                </p>
-                <p class="name font-weight-bold mb-1">Robert T.</p>
-                <div class="rating text-warning">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i
-                  ><i class="fas fa-star-half-alt"></i
-                  ><i class="far fa-star"></i>
-                </div>
-              </div>
-
-              <!-- Testimonial 5 -->
-              <div class="item text-center p-4 bg-white rounded shadow-sm">
-                <p class="mb-3">
-                  "The website redesign was completed on time and within budget.
-                  Their team was professional and responsive throughout the
-                  project."
-                </p>
-                <p class="name font-weight-bold mb-1">
-                  Janet K.
-                  <span class="d-block text-muted small"
-                    >Non-profit Director</span
+              <div
+                id="accordion"
+                class="myaccordion w-100"
+                aria-multiselectable="true"
+              >
+                <div class="card">
+                  <div class="card-header p-0" id="headingOne">
+                    <h2 class="mb-0">
+                      <button
+                        href="#collapseOne"
+                        class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                        data-parent="#accordion"
+                        data-toggle="collapse"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <p class="mb-0">What design services do you offer?</p>
+                        <i class="fa" aria-hidden="true"></i>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    class="collapse show"
+                    id="collapseOne"
+                    role="tabpanel"
+                    aria-labelledby="headingOne"
                   >
-                </p>
-                <div class="rating text-warning">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="far fa-star"></i>
+                    <div class="card-body py-3 px-0">
+                      <ol>
+                        <li>Brand identity and logo design</li>
+                        <li>
+                          User interface (UI) and user experience (UX) design
+                        </li>
+                        <li>Website design and development</li>
+                        <li>Mobile application design</li>
+                        <li>Print and digital marketing materials</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header p-0" id="headingTwo" role="tab">
+                    <h2 class="mb-0">
+                      <button
+                        href="#collapseTwo"
+                        class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                        data-parent="#accordion"
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <p class="mb-0">What's your design process?</p>
+                        <i class="fa" aria-hidden="true"></i>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    class="collapse"
+                    id="collapseTwo"
+                    role="tabpanel"
+                    aria-labelledby="headingTwo"
+                  >
+                    <div class="card-body py-3 px-0">
+                      <ol>
+                        <li>Discovery and research phase</li>
+                        <li>Concept development and wireframing</li>
+                        <li>Design iterations and feedback</li>
+                        <li>Finalization and delivery</li>
+                        <li>Implementation support</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header p-0" id="headingThree" role="tab">
+                    <h2 class="mb-0">
+                      <button
+                        href="#collapseThree"
+                        class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                        data-parent="#accordion"
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <p class="mb-0">
+                          Do you work with clients outside Uganda?
+                        </p>
+                        <i class="fa" aria-hidden="true"></i>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    class="collapse"
+                    id="collapseThree"
+                    role="tabpanel"
+                    aria-labelledby="headingTwo"
+                  >
+                    <div class="card-body py-3 px-0">
+                      <ol>
+                        <li>Yes, we work with clients worldwide</li>
+                        <li>All communication can be done remotely</li>
+                        <li>We accommodate different time zones</li>
+                        <li>International payment options available</li>
+                        <li>Same quality standards for all projects</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header p-0" id="headingFour" role="tab">
+                    <h2 class="mb-0">
+                      <button
+                        href="#collapseFour"
+                        class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                        data-parent="#accordion"
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <p class="mb-0">What file formats will I receive?</p>
+                        <i class="fa" aria-hidden="true"></i>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    class="collapse"
+                    id="collapseFour"
+                    role="tabpanel"
+                    aria-labelledby="headingTwo"
+                  >
+                    <div class="card-body py-3 px-0">
+                      <p>
+                        We provide all final deliverables in industry-standard
+                        formats including PDF, JPG, PNG, SVG, and AI for print
+                        work. For digital projects, we provide source files
+                        (PSD, XD, Figma, etc.) along with style guides and
+                        documentation. Web projects include all HTML/CSS/JS
+                        files and assets.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section
-      class="ftco-appointment ftco-section img"
-      style="background-image: url(images/WOMAN.jpg)"
-    >
-      <div class="overlay"></div>
-    </section>
+      <!-- Font Awesome for star ratings -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      />
+
+      <section class="ftco-section testimony-section bg-light py-5">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+              <h2 class="mb-4">Client Testimonials</h2>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <div class="carousel-testimony owl-carousel ftco-owl">
+                <!-- Testimonial 1 -->
+                <div class="item text-center p-4 bg-white rounded shadow-sm">
+                  <p class="mb-3">
+                    "Ambrly Designs transformed our brand identity completely.
+                    Their attention to detail and creative approach exceeded our
+                    expectations."
+                  </p>
+                  <p class="name font-weight-bold mb-1">Sarah K.</p>
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="item text-center p-4 bg-white rounded shadow-sm">
+                  <p class="mb-3">
+                    "The mobile app they designed for us has significantly
+                    improved user engagement. Their UX solutions were innovative
+                    yet practical."
+                  </p>
+                  <p class="name font-weight-bold mb-1">David M.</p>
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="item text-center p-4 bg-white rounded shadow-sm">
+                  <p class="mb-3">
+                    "Working with Ambrly was a game-changer for our e-commerce
+                    platform. Their designs increased our conversion rate by
+                    40%."
+                  </p>
+                  <p class="name font-weight-bold mb-1">Grace N.</p>
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="item text-center p-4 bg-white rounded shadow-sm">
+                  <p class="mb-3">
+                    "Their branding expertise helped us establish a strong
+                    market presence. The visual identity they created perfectly
+                    represents our values."
+                  </p>
+                  <p class="name font-weight-bold mb-1">Robert T.</p>
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i
+                    ><i class="fas fa-star-half-alt"></i
+                    ><i class="far fa-star"></i>
+                  </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="item text-center p-4 bg-white rounded shadow-sm">
+                  <p class="mb-3">
+                    "The website redesign was completed on time and within
+                    budget. Their team was professional and responsive
+                    throughout the project."
+                  </p>
+                  <p class="name font-weight-bold mb-1">
+                    Janet K.
+                    <span class="d-block text-muted small"
+                      >Non-profit Director</span
+                    >
+                  </p>
+                  <div class="rating text-warning">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section
+        class="ftco-appointment ftco-section img"
+        style="background-image: url(images/WOMAN.jpg)"
+      >
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 half ftco-animate">
+              <h2 class="mb-4">Ready to start your project?</h2>
+              <p style="color: #dadada">
+                Get in touch with our team to discuss your digital design and
+                development needs.
+              </p>
+              <p>
+                <a href="contact.html" class="btn btn-primary px-4 py-3"
+                  >Contact Us</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
+    <!-- Scripts -->
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jquery-migrate-3.0.1.min.js" defer></script>
+    <script src="js/popper.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/jquery.easing.1.3.js" defer></script>
+    <script src="js/jquery.waypoints.min.js" defer></script>
+    <script src="js/jquery.stellar.min.js" defer></script>
+    <script src="js/owl.carousel.min.js" defer></script>
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
+    <script src="js/jquery.animateNumber.min.js" defer></script>
+    <script src="js/scrollax.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
     <script>
-      fetch("footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
+      // Load footer
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("footer.html")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.text();
+          })
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          })
+          .catch((error) => {
+            console.error("Error loading footer:", error);
+          });
+      });
     </script>
-
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#F96D00"
-        />
-      </svg>
-    </div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>
