@@ -133,16 +133,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .navbar-toggler-text {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(211, 130, 44, 0.8);
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.navbar-toggler:hover .navbar-toggler-text {
-  color: rgb(156, 22, 22);
-}
+
 
 /* Sticky Navbar */
 .navbar.scrolled {
@@ -175,13 +173,17 @@ body.ftco-navbar-show { padding-top: 60px; }
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 20px;
   background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-wrap .container {
   position: relative;
   z-index: 2;
+}
+
+.hero-wrap.hero-wrap-2 {
+  margin-bottom: 0; /* or adjust as needed */
 }
 
 .breadcrumbs {
@@ -271,6 +273,12 @@ body.ftco-navbar-show { padding-top: 60px; }
   margin-bottom: 15px;
 }
 
+.services-section {
+  position: relative;
+  z-index: 1; /* Below hero but above normal content */
+  margin-top: 0; /* Reset any potential margins */
+}
+
 /* ===================================
    5. Projects / Portfolio Section
 =================================== */
@@ -344,7 +352,7 @@ body.ftco-navbar-show { padding-top: 60px; }
   <div class="container">
     <a class="navbar-brand" href="index.html">Ambrly<span>solution</span></a>
     <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-text" style="color: rgba(255, 255, 255, 0.8);">Menu</span>
+  <span class="navbar-toggler-text";">Menu</span>
 
     </button>
 
