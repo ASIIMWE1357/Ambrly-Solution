@@ -23,9 +23,17 @@
     <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" />
 
     <!-- Preload fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet"
+      />
     </noscript>
 
     <!-- Font Awesome with integrity check -->
@@ -39,7 +47,13 @@
       referrerpolicy="no-referrer"
     />
     <noscript>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
     </noscript>
 
     <!-- CSS with preload -->
@@ -550,30 +564,30 @@
         .hero-wrap {
           min-height: 250px;
         }
-        
+
         .navbar-brand {
           font-size: 1.2rem;
         }
-        
+
         .nav-item {
           margin: 5px 0;
         }
-        
+
         .cta {
           margin-left: 0;
           margin-top: 10px;
           display: block;
           width: 100%;
         }
-        
+
         .heading-section h2 {
           font-size: 1.5rem;
         }
-        
+
         .project .text {
           padding: 15px;
         }
-        
+
         .project .text h3 {
           font-size: 14px;
         }
@@ -584,19 +598,19 @@
         .hero-wrap {
           min-height: 300px;
         }
-        
+
         .navbar-collapse {
           padding: 15px 0;
         }
-        
+
         .services {
           margin-bottom: 30px;
         }
-        
+
         .project {
           margin-bottom: 20px;
         }
-        
+
         .row.g-4 > [class*="col-"] {
           flex: 0 0 100%;
           max-width: 100%;
@@ -609,7 +623,7 @@
           flex: 0 0 50%;
           max-width: 50%;
         }
-        
+
         .row.g-4 > .col-lg-3 {
           flex: 0 0 50%;
           max-width: 50%;
@@ -640,20 +654,20 @@
         .footer {
           display: none !important;
         }
-        
+
         body {
           padding: 0;
           background: white;
           color: black;
           font-size: 12pt;
         }
-        
+
         .container {
           width: 100%;
           max-width: 100%;
           padding: 0;
         }
-        
+
         .project {
           page-break-inside: avoid;
           margin-bottom: 20pt;
@@ -684,8 +698,6 @@
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-text">Menu</span>
-
-         
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
@@ -879,8 +891,7 @@
                 <div class="text text-center">
                   <span>Web Development</span>
                   <h3>
-                    <a
-                      href="https://ambrly-asiimwe-ambroses-projects.vercel.app/"
+                    <a href="https://ambrly.vercel.app/"
                       >Best Solution for Information Technology</a
                     >
                   </h3>
@@ -1004,7 +1015,10 @@
     </div>
 
     <!-- Scripts with defer and async where appropriate -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jquery-migrate-3.0.1.min.js" defer></script>
     <script src="js/popper.min.js" defer></script>
@@ -1022,11 +1036,11 @@
 
     <!-- Footer loading script -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         fetch("footer.html")
           .then((response) => {
             if (!response.ok) {
-              throw new Error('Network response was not ok');
+              throw new Error("Network response was not ok");
             }
             return response.text();
           })
@@ -1034,18 +1048,18 @@
             document.getElementById("footer-placeholder").innerHTML = data;
           })
           .catch((error) => {
-            console.error('Error loading footer:', error);
+            console.error("Error loading footer:", error);
           });
       });
     </script>
 
     <!-- Sticky Navbar Logic -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         var navbar = document.getElementById("ftco-navbar");
         var scrolled = false;
 
-        window.addEventListener('scroll', function() {
+        window.addEventListener("scroll", function () {
           if (window.scrollY > 100) {
             if (!scrolled) {
               navbar.classList.add("scrolled", "awake");
@@ -1056,7 +1070,7 @@
             if (scrolled) {
               navbar.classList.remove("awake");
               navbar.classList.add("sleep");
-              setTimeout(function() {
+              setTimeout(function () {
                 if (window.scrollY < 10) {
                   navbar.classList.remove("scrolled", "sleep");
                   document.body.classList.remove("ftco-navbar-show");
